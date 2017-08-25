@@ -52,7 +52,7 @@ void visualizeDetectionResults(
     }
 }
 //-------------------------------------------------------------------------------------------------
-void cornerRefinement(const cv::Mat& img, TagObservation& tagObs)
+void refineTagObservation(const cv::Mat& img, TagObservation& tagObs)
 {
     std::vector<cv::Point2f> corners;
     for (size_t i = 0; i < 4; i++)

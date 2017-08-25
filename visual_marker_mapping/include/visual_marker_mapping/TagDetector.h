@@ -12,7 +12,7 @@ namespace visual_marker_mapping
 void visualizeDetectionResults(
     const DetectionResult& detectionResult, const std::string& exportFolder);
 
-void cornerRefinement(const cv::Mat& img, TagObservation& tagObs);
+void refineTagObservation(const cv::Mat& img, TagObservation& tagObs);
 }
 
 #endif

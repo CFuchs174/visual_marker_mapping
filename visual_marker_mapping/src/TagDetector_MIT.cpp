@@ -98,7 +98,7 @@ namespace mit
                 // do opencv corner refinement
                 if (doCornerRefinement)
                 {
-                    cornerRefinement(img, tagObs);
+                    refineTagObservation(img, tagObs);
                 }
 
                 result.tagObservations.push_back(tagObs);
