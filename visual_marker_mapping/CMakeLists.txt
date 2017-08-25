@@ -35,7 +35,7 @@ add_library(visual_marker_mapping_lib
             include/visual_marker_mapping/TagDetector_MIT.h)
 
 if(BUILD_UMICH)
-target_sources(visual_marker_mapping_lib PUBLIC
+target_sources(visual_marker_mapping_lib PRIVATE
 			src/TagDetector_Umich.cpp
 			include/visual_marker_mapping/TagDetector_Umich.h)
 endif(BUILD_UMICH)
@@ -75,6 +75,7 @@ target_link_libraries(visual_marker_mapping
                       ${OpenCV_LIBS}
                       ${CERES_LIBRARIES}
                       ${Boost_LIBRARIES}
+					  ${GLOG_LIBRARY}
                       visual_marker_mapping_lib
                       apriltags)
 
@@ -100,6 +101,3 @@ target_link_libraries(visual_marker_detection
 if(BUILD_UMICH)
 target_link_libraries(visual_marker_detection umich_apriltags)
 endif(BUILD_UMICH)
-if(WIN32)
-target_link_libraries(visual_marker_mapping_lib glog)
-endif(WIN32)

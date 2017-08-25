@@ -52,6 +52,6 @@ endif(BUILD_UMICH)
 add_subdirectory(visual_marker_mapping)
 add_subdirectory(fast_mit_apriltags EXCLUDE_FROM_ALL)
 
-if(UNIX)
+if(BUILD_UMICH)
 add_subdirectory(umich_apriltags)
-endif(UNIX)
+endif(BUILD_UMICH)
